@@ -7,7 +7,7 @@ import io
 import nltk
 nltk.download('punkt')
 
-st.set_page_config(page_title='DEEZNews: Get the News!📰', page_icon='./Meta/newspaper1.ico')
+st.set_page_config(page_title='DEEZNews: Get the News📰', page_icon='./Meta/newspaper1.ico')
 
 
 def fetch_news_search_topic(topic):
