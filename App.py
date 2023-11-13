@@ -11,7 +11,7 @@ st.set_page_config(page_title='DEEZNews: Get the News!📰', page_icon='./Meta/n
 
 
 def fetch_news_search_topic(topic):
-    site = 'https://news.google.com/news/rss/search/section/q/{}'.format(topic)
+    site = 'https://news.google.com/news/rss/search/section/q/{}?hl=en&gl=PH&ceid=PH%3Aen'.format(topic)
     op = urlopen(site)  # Open that site
     rd = op.read()  # read data from site
     op.close()  # close the object
@@ -21,7 +21,7 @@ def fetch_news_search_topic(topic):
 
 
 def fetch_top_news():
-    site = 'https://news.google.com/news/rss?'
+    site = 'https://news.google.com/news/rss?hl=en&gl=PH&ceid=PH%3Aen'
     op = urlopen(site)  # Open that site
     rd = op.read()  # read data from site
     op.close()  # close the object
@@ -31,7 +31,7 @@ def fetch_top_news():
 
 
 def fetch_category_news(topic):
-    site = 'https://news.google.com/news/rss/headlines/section/topic/{}'.format(topic)
+    site = 'https://news.google.com/news/rss/headlines/section/topic/{}?hl=en&gl=PH&ceid=PH%3Aen'.format(topic)
     op = urlopen(site)  # Open that site
     rd = op.read()  # read data from site
     op.close()  # close the object
