@@ -7,7 +7,7 @@ import io
 import nltk
 nltk.download('punkt')
 
-st.set_page_config(page_title='DEEZNews: Get the News📰', page_icon='./Meta/newspaper1.ico')
+st.set_page_config(page_title='DEEZNews: Get the News!📰', page_icon='./Meta/newspaper1.ico')
 
 
 def fetch_news_search_topic(topic):
@@ -89,12 +89,12 @@ def run():
 
     with col3:
         st.write("")
-    category = ['--Select--', 'Top News!🔥', 'Categories📝', 'Search🔍']
+    category = ['--Select--', 'Top News!🌍', 'Categories📝', 'Search🔍']
     cat_op = st.selectbox('Please Select:', category)
     if cat_op == category[0]:
         st.warning('Please Select Type!')
     elif cat_op == category[1]:
-        st.subheader("✅ Here Are the Top News!🔥 For You")
+        st.subheader("✅ Here Are the Top News!🌍 For You")
         no_of_news = st.slider('Number of News:', min_value=5, max_value=25, step=1)
         news_list = fetch_top_news()
         display_news(news_list, no_of_news)
