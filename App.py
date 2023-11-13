@@ -94,7 +94,7 @@ def run():
     if cat_op == category[0]:
         st.warning('Please Select Type!')
     elif cat_op == category[1]:
-        st.subheader("✅ Here is the Top News!🔥 For You")
+        st.subheader("✅ Here Are the Top News!🔥 For You")
         no_of_news = st.slider('Number of News:', min_value=5, max_value=25, step=1)
         news_list = fetch_top_news()
         display_news(news_list, no_of_news)
