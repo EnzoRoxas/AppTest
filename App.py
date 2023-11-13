@@ -89,7 +89,7 @@ def run():
 
     with col3:
         st.write("")
-    category = ['--Select--', 'Top News!🌍', 'Categories📝', 'Search🔍']
+    category = ['--Select--', 'Top News!🌍', 'Hot Topics!📝', 'Search🔍']
     cat_op = st.selectbox('Please Select:', category)
     if cat_op == category[0]:
         st.warning('Please Select Type!')
@@ -101,15 +101,15 @@ def run():
     elif cat_op == category[2]:
         av_topics = ['Choose Topic', 'WORLD', 'NATION', 'BUSINESS', 'TECHNOLOGY', 'ENTERTAINMENT', 'SPORTS', 'SCIENCE',
                      'HEALTH']
-        st.subheader("Choose a Category!")
-        chosen_topic = st.selectbox("Choose a Category", av_topics)
+        st.subheader("Choose a Topic!")
+        chosen_topic = st.selectbox("Select One!", av_topics)
         if chosen_topic == av_topics[0]:
             st.warning("Please Choose a Category")
         else:
             no_of_news = st.slider('Number of News:', min_value=5, max_value=25, step=1)
             news_list = fetch_category_news(chosen_topic)
             if news_list:
-                st.subheader("✅ Here Are Some {} News For You".format(chosen_topic))
+                st.subheader("✅ Here Are The {} News For You".format(chosen_topic))
                 display_news(news_list, no_of_news)
             else:
                 st.error("No News Found For {}".format(chosen_topic))
@@ -122,7 +122,7 @@ def run():
             user_topic_pr = user_topic.replace(' ', '')
             news_list = fetch_news_search_topic(topic=user_topic_pr)
             if news_list:
-                st.subheader("✅ Here Are Some {} News For You".format(user_topic.capitalize()))
+                st.subheader("✅ Here The {} News For You".format(user_topic.capitalize()))
                 display_news(news_list, no_of_news)
             else:
                 st.error("No News Found For {}".format(user_topic))
