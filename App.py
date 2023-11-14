@@ -7,7 +7,7 @@ import io
 import nltk
 nltk.download('punkt')
 
-st.set_page_config(page_title='DEEZNews: Get the News!📰', page_icon='./Meta/newspaper1.ico')
+st.set_page_config(page_title='INFONews🇵🇭: Get the News!📰', page_icon='./Meta/newspaper1.ico')
 
 
 def fetch_news_search_topic(topic):
@@ -76,7 +76,7 @@ def display_news(list_of_news, news_quantity):
 
 
 def run():
-    st.title("DEEZNews🇵🇭: Get The News!📰")
+    st.title("INFONews🇵🇭: Get The News!📰")
     image = Image.open('./Meta/newspaper2.png')
 
     col1, col2, col3 = st.columns([3, 5, 3])
